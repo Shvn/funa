@@ -4,12 +4,7 @@ import { NavigationActions } from "react-navigation";
 
 export default class Login extends Component {
   resetToDashboard() {
-    this.props.navigation.dispatch(
-      NavigationActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({ routeName: "Dashboard" })]
-      })
-    );
+    this.props.navigation.navigate("Dashboard");
   }
 
   render() {

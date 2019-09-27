@@ -1,29 +1,25 @@
-import { StackNavigator } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack';
 import Home from "../screens/Home";
 import Login from "../screens/Login";
 import Signup from "../screens/Signup";
-import Dashboard from "../screens/Dashboard";
 
-const AppStackNav = StackNavigator({
-	Home: {
-		screen: Home,
-		navigationOptions: {
-			header: null
-		}
-	},
-	Login: {
-		screen: Login,
-		navigationOptions: {
-			header: null
-		}
-	},
-	Signup: {
-		screen: Signup,
-		navigationOptions: {
-			header: null
-		}
-	},
-	Dashboard: { screen: Dashboard }
-});
+const AppStackNav = createStackNavigator(
+  {
+    Home: {
+      screen: Home,
+    },
+    Login: {
+      screen: Login,
+    },
+    Signup: {
+      screen: Signup,
+    },
+  },
+  {
+    defaultNavigationOptions: {
+      header: null
+    }
+  }
+);
 
 export default AppStackNav;

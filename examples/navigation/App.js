@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import AppStackNav from "./navigators/AppStackNav";
+import { createAppContainer } from 'react-navigation';
+import RootNav from "./navigators/RootNav";
+
+const Root = createAppContainer(RootNav);
 
 export default class App extends Component {
-	render() {
-		return <AppStackNav />;
-	}
+  render() {
+    return <Root />;
+  }
 }

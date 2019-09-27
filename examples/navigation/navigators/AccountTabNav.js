@@ -1,20 +1,24 @@
-import { TabNavigator } from "react-navigation";
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import AccountProfile from "../screens/AccountProfile";
 import AccountSetting from "../screens/AccountSetting";
 
-const AccountTabNav = TabNavigator(
-	{
-		AccountProfile: { screen: AccountProfile },
-		AccountSetting: {
-			screen: AccountSetting,
-			navigationOptions: {
-				title: "Setting"
-			}
-		}
-	},
-	{
-		backBehavior: "none",
-		tabBarPosition: "bottom"
-	}
+const AccountTabNav = createBottomTabNavigator(
+  {
+    AccountProfile: {
+      screen: AccountProfile,
+      navigationOptions: {
+        tabBarLabel: "Profile"
+      }
+    },
+    AccountSetting: {
+      screen: AccountSetting,
+      navigationOptions: {
+        tabBarLabel: "Setting"
+      }
+    }
+  },
+  {
+    backBehavior: "none",
+  }
 );
 export default AccountTabNav;

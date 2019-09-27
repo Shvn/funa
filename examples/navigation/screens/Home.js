@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class Home extends Component {
   render() {
@@ -11,10 +11,10 @@ export default class Home extends Component {
           Welcome to FUNA!
         </Text>
         <View style={styles.wrapper}>
-          <TouchableOpacity onPress={() => navigate("Login")}>
+          <TouchableOpacity onPress={() => navigate('Login')}>
             <Text style={styles.link}>Login</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate("Signup")}>
+          <TouchableOpacity onPress={() => navigate('Signup')}>
             <Text style={styles.link}>Signup</Text>
           </TouchableOpacity>
         </View>
@@ -26,23 +26,23 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,
-    textAlign: "center",
-    margin: 10
+    textAlign: 'center',
+    margin: 10,
   },
   wrapper: {
-    flexDirection: "row"
+    flexDirection: 'row',
   },
   link: {
     fontSize: 16,
-    textAlign: "center",
-    color: "blue",
+    textAlign: 'center',
+    color: 'blue',
     marginBottom: 5,
-    margin: 10
-  }
+    margin: 10,
+  },
 });
